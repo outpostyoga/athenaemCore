@@ -12,3 +12,4 @@ IN DEVELOPMENT.
 1. // Commuter RR - X-Wing - Fighter Class Designation 34F23 'Commander G.'
 2. let jsonInputArgs = cx.debug ? JSON.stringify ( Array.from ( arguments ) ) : undefined;
 3. if ( cx.debug ) cx.log.line ( "[" + $0MM_i18n ( "AcString.js" ) + "][" + $0MM_i18n ( "$0M_assetTag" ) + "] " + jsonInputArgs + " " + $0V_result );
+4. In the source module, declare constants using const. Then, in the consumer module, import using destructuring with const to retain maximum performance and clarity.
