@@ -1,4 +1,4 @@
-// Logic. [130,245y][04m][21d] Javascript polyfill function header.
+  // Logic. [130,245y][04m][21d] Javascript polyfill function header.
 
 const $0F_isBrowserStandaloneConsole = false;
 
@@ -10,7 +10,7 @@ if ( cx.log == null ) {
 
 }
 
-if ( cx.debug ) cx.log.oneliner ( String.chat.i18n ( cx, "SnippetFileName.js" ), String.chat.i18n ( cx, "snippetFunctionName()" ), String.chat.i18n ( cx, "arguments" ), JSON.stringify ( Array.from ( arguments ) ) );
+if ( cx.debug ) cx.log.oneliner ( String.chat.i18n ( cx, "SnippetFileName.js" ), String.chat.i18n ( cx, "snippetFunctionName()" ), String.chat.i18n ( cx, "arguments" ), arguments.length > 0 ? JSON.stringify ( Array.from ( arguments ) ) : undefined );
 
 // Data. Input parameters. Defaults.
 
