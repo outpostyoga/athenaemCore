@@ -4,6 +4,8 @@ A solid Javascript library for localhost, data files and production insanity. Ve
 # Rules.
 Because sometimes they are the elegant solution and the result of an incredible amount of work and self-discipline.
 
+CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the history of trade and fraud.  Stay safe.
+
 TIME. Time is always Date.now ( ).  UTC timestamps in milliseconds.  Fuck you.
 
 STRINGS. Javascript string concatenation is optimized for <1K characters <5 element strings and <10K loops. Otherwise arrays and .join() for the win.
