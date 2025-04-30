@@ -6,7 +6,7 @@ if ( cx.log == null ) {
 
   cx.debug = cx.debug === true;
     
-  cx.log = $0F_isBrowserStandaloneConsole ? { console : console.log, table : console.table, warn : console.warn } : new AcLog ( String.chat.i18n ( cx, "SnippetFileName.js" ), String.chat.i18n ( cx, "snippetFunctionName()" ), String.chat.i18n ( cx, "New log started because 'cx.log' is missing in funtion call." ) )
+  cx.log = $0F_isBrowserStandaloneConsole ? { console : console.log, table : console.table, warn : console.warn } : new AcLog ( String.chat.i18n ( cx, "SnippetFileName.js" ), String.chat.i18n ( cx, "snippetFunctionName()" ), String.chat.i18n ( cx, "New log started because 'cx.log' is missing in function call." ) )
 
 }
 
