@@ -8,6 +8,9 @@ CONST. Use them always, they are faster. Variables, then Object.property and the
 
 CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the history of trade and fraud.  Stay safe.
 
+ERRORS. Use the netcode version for everything. The try catch is extremely slow when you use it and negligible when present but unused.  The best solution for returning an error?
+` if ( cx.error != null ) { cx.error.messages.push ( cx.error.message = StringChat$$M_i18n ( "[AcString.js][$0M_assetTag] This is a new Error message for an old error." ) ); return null; }
+
 STRINGS. Javascript string concatenation is optimized for <1K characters <5 element strings and <10K loops. Otherwise arrays and .join() for the win.
 
 TIME. Time is always Date.now ( ).  UTC timestamps in milliseconds.  Fuck you.
