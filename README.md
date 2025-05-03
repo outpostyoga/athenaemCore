@@ -4,11 +4,12 @@ A solid Javascript library for localhost, data files and production insanity. Ve
 # Rules.
 Because sometimes they are the elegant solution and the result of an incredible amount of work and self-discipline.
 
-CONST. Use them always, they are faster.Variables, then Object.property and then ( Object.freeze ( Object.property ) ).property. Import and destructure into module constants.
+CONSTANTS. Use `const` if possible as it is always faster. In descending performance order are `let` and `var` variables, `Object.property`, and then `Object.freeze ( Object.property ); Object.property`. Import and destructure into module constants.
 - `let fl_isHotAsHell = true;` is a block scoped variable boolean
 - `const $0F_isHotAsHell` is a block scoped function boolean
 - `const $$F_isHotAsHell` is a local module boolean (private by default, public if declared in module.exports)
 - `const Namespace$$F_isHotAsHell = true;` is an imported / exported boolean (or flag)
+
 In our syntax, the prefixes are a nod the all caps constant standard while avoiding the frustration of that solution when constants are used more than variables. `$0A` means array, `$0F` means flag, `$0M` means method, `$0O` means object, `$0V` means value.
 
 CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the history of trade and fraud.  Stay safe.
