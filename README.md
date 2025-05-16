@@ -15,8 +15,32 @@ In our syntax, the prefixes are a nod the all caps constant standard while avoid
 CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the history of trade and fraud.  Stay safe.
 
 ERRORS. Use the netcode version for everything. The try catch is extremely slow when you use it and negligible when present but unused.  The best solution for returning an error?
-- `if ( cx.error != null ) { cx.error.messages.push ( cx.error.message = StringChat$$M_i18n ( "[AcString.js][$0M_assetTag] This is a new Error message for an old error." ) ); return null; }`
-
+- `throw new Error ( "Yikes!" )` without try/catch equivalent.
+```
+if ( typeof dickens !== "string" ) {
+  cx.error = Error$$M_reset ( cx,
+    String$$M_oneliner ( cx,
+      StringChat$$M_i18n ( cx, "SnippetFileName.js" ),
+      StringChat$$M_i18n ( cx, "snippetFunctionName()" ),
+      StringChat$$M_i18n ( cx, "arguments" )
+    )
+  );
+  return null;
+};
+```
+- `catch ( error )` without try/catch equivalent.
+```
+if ( cx.error != null ) {
+  cx.error.messages.push ( cx.error.message = 
+    String$$M_oneliner ( cx,
+      StringChat$$M_i18n ( cx, "SnippetFileName.js" ),
+      StringChat$$M_i18n ( cx, "snippetFunctionName()" ),
+      StringChat$$M_i18n ( cx, "This is a new Error message for an old error." )
+    )
+  );
+  return null;
+}
+```
 STRINGS. Javascript string concatenation is optimized for <1K characters <5 element strings and <10K loops. Otherwise arrays and `.join ( )` for the win.
 - `""` is null or undefined.
 - `"a"` is a character.
