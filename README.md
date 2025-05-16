@@ -18,6 +18,9 @@ ERRORS. Use the netcode version for everything. The try catch is extremely slow 
 - `if ( cx.error != null ) { cx.error.messages.push ( cx.error.message = StringChat$$M_i18n ( "[AcString.js][$0M_assetTag] This is a new Error message for an old error." ) ); return null; }`
 
 STRINGS. Javascript string concatenation is optimized for <1K characters <5 element strings and <10K loops. Otherwise arrays and `.join ( )` for the win.
+- `""` is null or undefined.
+- `"a"` is a character.
+- `"ab"` where `"string".length > 1` is a string.
 
 TIME. Time is always `Date.now ( )` aka UTC timestamps in milliseconds.  Fuck you.
 
