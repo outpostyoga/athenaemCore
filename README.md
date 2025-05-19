@@ -14,6 +14,11 @@ In our syntax, the prefixes are a nod the all caps constant standard while avoid
 
 CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the history of trade and fraud.  Stay safe.
 
+DATA.
+- `Flat Media Library` Raw, dev and b-z roll files and values.
+- `Released Assets` Forms, tests, posters and other team viewable files and values.
+- `Games Played` Released assets printed and used by a person or group.  Can be a form submission.
+
 ERRORS. Use the netcode version for everything. The try catch is extremely slow when you use it and negligible when present but unused.  The best solution for returning an error?
 - `throw new Error ( "Yikes!" )` without try/catch equivalent.
 ```
