@@ -16,8 +16,19 @@ CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the
 
 DATA.
 - `Flat Media Library` Raw, dev and b-z roll files and values.
-- `Released Assets` Forms, tests, posters and other team viewable files and values.
-- `Games Played` Released assets printed and used by a person or group.  Can be a form submission.
+- `Released Assets = []` Forms, tests, posters and other team viewable files and values.
+  - `Asset` File or value published or printed as finalized for use.
+  - `Permissions` Who it is released to. Who can play it.  Who can copy it. Who can view it. Who can submit it.
+  - `Audience = {` Optional metadata for each distribution audience.
+    - `Namespace : {`
+      - `Title` A descriptive YouTube title.
+      - `Description` Optional description for UI use.
+      - `Instructions` To be disseminated with the file to all audiences.
+- `Games Played = [ ]` Released assets printed and used by a person or group.  Can be a form submission.
+  - `Asset`
+  - `GameId` Or unique print id. The unique value associated with the specific instance of an asset used to play a game.
+  - `Used Asset` Printed asset returned with added data, markings, or general wear and tear.
+  - `All Players` Identical structure to permissions, but it is the people who played with the asset returned.
 
 ERRORS. Use the netcode version for everything. The try catch is extremely slow when you use it and negligible when present but unused.  The best solution for returning an error?
 - `throw new Error ( "Yikes!" )` without try/catch equivalent.
