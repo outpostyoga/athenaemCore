@@ -87,6 +87,16 @@ if ( cx.error != null ) {
 NETCODE. Fastest solution available.  Use it. There is no reason not to.
 - `const $0O_object = Object.create ( null );` // Replaces { } or new Object ( ).
 - `$0O_set[word] = ($0O_set[word] || 0) + 1;` // Uninitialized increment.
+- Always assign object properties to const if used more than once.
+```
+const String$$M_boundary = function ( cx, query, dickens ) {
+  const $0O_boundary = Object.create ( null );
+  const $0V_queryLength = query.length;
+  for ( let i = 0; i < $0V_queryLength; i++ ) {
+    const $0A_queryterm = query[ i ];
+    const $0V_term = $0A_queryterm[ 0 ];
+    const $0V_termLength = $0V_term.length;
+```
 
 STRINGS. Javascript string concatenation is optimized for <1K characters <5 element strings and <10K loops. Otherwise arrays and `.join ( )` for the win.
 - `""` is null or undefined.
