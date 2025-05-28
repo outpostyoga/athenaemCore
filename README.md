@@ -35,6 +35,10 @@ CONSTANTS. Use `const` if possible as it is always faster. In descending perform
 
 In our syntax, the prefixes are a nod the all caps constant standard while avoiding the frustration of that solution when constants are used more than variables. `$0A` means array, `$0F` means flag, `$0M` means method, `$0O` means object, `$0V` means value.
 
+BOTTLENECKS. Things you should avoid. They are slowdowns for most use cases.
+- `Object.delete ( key );` // Deoptomizes JIT and other important rack metal.
+- `try { throw ... ; } catch ( e ) { };` // Without throw it is negligible.
+
 CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the history of trade and fraud.  Stay safe.
 
 DATA.
@@ -80,6 +84,10 @@ if ( cx.error != null ) {
   return null;
 }
 ```
+NETCODE. Fastest solution available.  Use it. There is no reason not to.
+- `const $0O_object = Object.create ( null );` // Replaces { } or new Object ( ).
+- `$0O_set[word] = ($0O_set[word] || 0) + 1;` // Uninitialized increment.
+
 STRINGS. Javascript string concatenation is optimized for <1K characters <5 element strings and <10K loops. Otherwise arrays and `.join ( )` for the win.
 - `""` is null or undefined.
 - `"a"` is a character.
