@@ -97,6 +97,14 @@ const String$$M_boundary = function ( cx, query, dickens ) {
     const $0V_term = $0A_queryterm[ 0 ];
     const $0V_termLength = $0V_term.length;
 ```
+- Use a boundary object for search results in searchable text.
+```
+"45,62": {
+  word: "swimmer",
+  matches: [ { term, count, start, end } ],
+  score: 12
+}
+```
 
 STRINGS. Javascript string concatenation is optimized for <1K characters <5 element strings and <10K loops. Otherwise arrays and `.join ( )` for the win.
 - `""` is null or undefined.
