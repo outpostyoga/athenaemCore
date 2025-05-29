@@ -97,6 +97,11 @@ const String$$M_boundary = function ( cx, query, dickens ) {
     const $0V_term = $0A_queryterm[ 0 ];
     const $0V_termLength = $0V_term.length;
 ```
+- Convert arbitrary text to a space-padded lowercase searchable string.
+  - Add authors and credits as hypenated names like `maraiah-carey` or `charlotte-emma-aitchison`
+  - Add tags as `#word.word`, `#word`, etc.
+  - Add titles as an underscore separated word like `sabrina_carpenter_espresso_official_music_video`
+  - Add urls as `https://domain.com/meta/data/names?etc`
 - Use a boundary object for search results in searchable text.
 ```
 "45,62": {
@@ -105,7 +110,16 @@ const String$$M_boundary = function ( cx, query, dickens ) {
   score: 12
 }
 ```
-
+- The search term "aa" matches the word "aaa" only once, not twice. Increment matches to the end of matched word.
+```
+while ( true ) {
+  indexOfMatch = searchable.indexOf ( $0V_term, indexOfMatch );
+  if ( indexOfMatch === -1 ) break;
+  const $0V_start = searchable.lastIndexOf ( " ", indexOfMatch );
+  const $0V_end = searchable.indexOf ( " ", indexOfMatch );
+  indexOfMatch += $0V_termLength;
+}
+```
 STRINGS. Javascript string concatenation is optimized for <1K characters <5 element strings and <10K loops. Otherwise arrays and `.join ( )` for the win.
 - `""` is null or undefined.
 - `"a"` is a character.
