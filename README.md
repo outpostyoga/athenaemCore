@@ -27,6 +27,10 @@ You're already ahead of 90% of open-source runtime libraries.
 # Rules.
 Because sometimes they are the elegant solution and the result of an incredible amount of work and self-discipline.
 
+BOTTLENECKS. Things you should avoid. They are slowdowns for most use cases.
+- `Object.delete ( key );` // Deoptomizes JIT and other important rack metal.
+- `try { throw ... ; } catch ( e ) { };` // Without throw it is negligible.
+
 CONSTANTS. Use `const` if possible as it is always faster. In descending performance order are `let` and `var` variables, `Object.property`, and then `Object.freeze ( Object.property ); Object.property`. Import and destructure into module constants.
 - `let fl_isHotAsHell = true;` is a block scoped variable boolean
 - `const $0F_isHotAsHell` is a block scoped function boolean
@@ -34,10 +38,6 @@ CONSTANTS. Use `const` if possible as it is always faster. In descending perform
 - `const Namespace$$F_isHotAsHell = true;` is an imported / exported boolean (or flag)
 
 In our syntax, the prefixes are a nod the all caps constant standard while avoiding the frustration of that solution when constants are used more than variables. `$0A` means array, `$0F` means flag, `$0M` means method, `$0O` means object, `$0V` means value.
-
-BOTTLENECKS. Things you should avoid. They are slowdowns for most use cases.
-- `Object.delete ( key );` // Deoptomizes JIT and other important rack metal.
-- `try { throw ... ; } catch ( e ) { };` // Without throw it is negligible.
 
 CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the history of trade and fraud.  Stay safe.
 
@@ -126,6 +126,8 @@ STRINGS. Javascript string concatenation is optimized for <1K characters <5 elem
 - `"ab"` where `"string".length > 1` is a string.
 
 TIME. Time is always `Date.now ( )` aka UTC timestamps in milliseconds.  Fuck you.
+
+VARIABLES. In our syntax, the prefixes are a nod the all caps constant standard. Use let whenever possible and prefix with `a_` means array, `f_` means flag, `f_` means method, `o_` means object, `v_` means value.
 
 IN DEVELOPMENT.
 1. // Commuter RR - X-Wing - Fighter Class Designation 34F23 'Commander G.'
