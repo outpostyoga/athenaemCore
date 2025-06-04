@@ -32,7 +32,7 @@ BOTTLENECKS. Things you should avoid. They are slowdowns for most use cases.
 - `try { throw ... ; } catch ( e ) { };` // Without throw it is negligible.
 
 CONSTANTS. Use `const` if possible as it is always faster. In descending performance order are `let` and `var` variables, `Object.property`, and then `Object.freeze ( Object.property ); Object.property`. Import and destructure into module constants.
-- `let fl_isHotAsHell = true;` is a block scoped variable boolean
+- `let f_isHotAsHell = true;` is a block scoped variable boolean
 - `const $0F_isHotAsHell` is a block scoped function boolean
 - `const $$F_isHotAsHell` is a local module boolean (private by default, public if declared in module.exports)
 - `const Namespace$$F_isHotAsHell = true;` is an imported / exported boolean (or flag)
