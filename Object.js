@@ -82,6 +82,8 @@ const $$M_memcacheReset = function ( cx ) {
 
       StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
 
+      StringChat$$M_i18n ( cx, "$$0_memcache.date.counter" ),
+
       $$0_memcache.date.counter
 
     )
@@ -95,6 +97,8 @@ const $$M_memcacheReset = function ( cx ) {
       StringChat$$M_i18n ( cx, "Object.js" ),
 
       StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
+
+      StringChat$$M_i18n ( cx, "$$0_memcache.date.now" ),
 
       $$0_memcache.date.now
 
@@ -110,7 +114,9 @@ const $$M_memcacheReset = function ( cx ) {
 
       StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
 
-      JSON.stringify ( cx, DateCache$$M_now ( cx ) )
+      StringChat$$M_i18n ( cx, "$$M_memcacheNow()" ),
+
+      JSON.stringify ( cx, $$M_memcacheNow ( cx ) )
 
     )
 
@@ -124,7 +130,9 @@ const $$M_memcacheReset = function ( cx ) {
 
       StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
 
-      JSON.stringify ( cx, DateCache$$M_now ( cx ) )
+      StringChat$$M_i18n ( cx, "String$$M_filestart()" ),
+
+      JSON.stringify ( cx, String$$M_filestart ( cx ) )
 
     )
 
