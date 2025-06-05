@@ -84,6 +84,21 @@ if ( cx.error != null ) {
   return null;
 }
 ```
+FILES. Start with a great set of top-level universal categories.
+- animalBiologyAndCulture
+- artDesignAndAesthetics
+- energyWeatherAndClimate
+- historyTimeAndMaps
+- humanBiologyAndCulture
+- landscapeGeologyAndGeography
+- languageLiteratureAndSymbols
+- mathMusicAndEngineering
+- moneySocietyandCivilization
+- philosophyReligionAndEthics
+- physicsChemistryAndMatter
+- plantBiologyAndCulture
+- spaceAstronomyAndExploration
+
 NETCODE. Fastest solution available.  Use it. There is no reason not to.
 - `const $0O_object = Object.create ( null );` // Replaces { } or new Object ( ).
 - `$0O_set[word] = ($0O_set[word] || 0) + 1;` // Uninitialized increment.
