@@ -38,7 +38,7 @@ const $$M_memcacheReset = function ( cx ) {
 
   // Logic. Update every 60,000 milliseconds (1 minute).
 
-  memcache.resets++;
+  $$0_memcache.resets++;
 
   Log$$M_add ( cx,
 
@@ -56,9 +56,9 @@ const $$M_memcacheReset = function ( cx ) {
 
   // Logic. Reset timestamp, then the counter to avoid race conditions.
 
-  memcache.date.now = Date.now ( );
+  $$0_memcache.date.now = Date.now ( );
   
-  memcache.date.counter = -1;
+  $$0_memcache.date.counter = -1;
 
   Log$$M_add ( cx,
 
@@ -68,7 +68,7 @@ const $$M_memcacheReset = function ( cx ) {
 
       StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
 
-      StringChat$$M_i18n ( cx, "Date memcache now timestamp successfully reset to the current value of Date.now." )
+      StringChat$$M_i18n ( cx, "Date $$0_memcache now timestamp successfully reset to the current value of Date.now." )
 
     )
 
@@ -80,9 +80,9 @@ const $$M_memcacheReset = function ( cx ) {
 
       StringChat$$M_i18n ( cx, "Object.js" ),
 
-      StringChat$$M_i18n ( cx, "$$M_memcacheReset" ),
+      StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
 
-      memcache.date.now
+      $$0_memcache.date.counter
 
     )
 
@@ -94,9 +94,9 @@ const $$M_memcacheReset = function ( cx ) {
 
       StringChat$$M_i18n ( cx, "Object.js" ),
 
-      StringChat$$M_i18n ( cx, "$$M_memcacheReset" ),
+      StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
 
-      memcache.date.now
+      $$0_memcache.date.now
 
     )
 
@@ -106,9 +106,9 @@ const $$M_memcacheReset = function ( cx ) {
 
     String$$M_oneliner ( cx,
 
-      StringChat$$M_i18n ( cx, "SnippetFileName.js" ),
+      StringChat$$M_i18n ( cx, "Object.js" ),
 
-      StringChat$$M_i18n ( cx, "DateCache$$M_now()" ),
+      StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
 
       JSON.stringify ( cx, DateCache$$M_now ( cx ) )
 
@@ -120,9 +120,9 @@ const $$M_memcacheReset = function ( cx ) {
 
     String$$M_oneliner ( cx,
 
-      StringChat$$M_i18n ( cx, "SnippetFileName.js" ),
+      StringChat$$M_i18n ( cx, "Object.js" ),
 
-      StringChat$$M_i18n ( cx, "DateCache$$M_now()" ),
+      StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
 
       JSON.stringify ( cx, DateCache$$M_now ( cx ) )
 
@@ -130,7 +130,7 @@ const $$M_memcacheReset = function ( cx ) {
 
   );
 
-  for ( const $0V_key in memcache.primitive ) memcache.primitive[ $0V_key ] = new Set ( );
+  for ( const $0V_key in $$0_memcache.primitive ) $$0_memcache.primitive[ $0V_key ] = new Set ( );
 
   Log$$M_add ( cx,
 
