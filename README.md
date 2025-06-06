@@ -140,7 +140,7 @@ STRINGS. Javascript string concatenation is optimized for <1K characters <5 elem
 - `"a"` is a character.
 - `"ab"` where `"string".length > 1` is a string.
 
-TIME. Time is always `Date.now ( )` aka UTC timestamps in milliseconds.  Fuck you.
+TIME. Time is always `Date.now ( )` aka UTC timestamps in milliseconds.
 
 VARIABLES. In our syntax, the prefixes are a nod the all caps constant standard. Use let whenever possible and prefix with `a_` means array, `f_` means flag, `f_` means method, `o_` means object, `v_` means value.
 
