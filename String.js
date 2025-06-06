@@ -14,7 +14,19 @@ const {
   
   Object$$O_settings } = $$F_isBrowserStandaloneConsole ? {
 
-  "Object$$O_memcache" : { },
+  "Object$$O_memcache" : {
+    
+    primitive : { }, 
+    
+    object : {
+
+      isArray : { has : has => false },
+      
+      isObject : { has : has => false }
+    
+    }
+    
+  },
   
   "Object$$O_settings" : { }
 
