@@ -99,6 +99,19 @@ FILES. Start with a great set of top-level universal categories.
 - plantBiologyAndCulture
 - spaceAstronomyAndExploration
 
+Follow up with a great set of subcategories like
+- music.md
+- lovers.md
+- landscape.md
+- cooking.md
+- wedding.md
+
+Finally divide them by defined learning environments.
+- inALibrary
+- inAMuseum
+- inASchool
+- inTheWild
+
 NETCODE. Fastest solution available.  Use it. There is no reason not to.
 - `const $0O_object = Object.create ( null );` // Replaces { } or new Object ( ).
 - `$0O_set[word] = ($0O_set[word] || 0) + 1;` // Uninitialized increment.
