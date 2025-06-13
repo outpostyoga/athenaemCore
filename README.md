@@ -41,7 +41,7 @@ In our syntax, the prefixes are a nod the all caps constant standard while avoid
 
 CRYPTO. Avoid it.  It goes up, it goes down, it represents nothing.  Look up the history of trade and fraud.  Stay safe.
 
-DATA. The driving force between the entire project from the start of development until its end.  This is the current empty default fileListItem datastore.
+DATA. The driving force between the entire project from the start of development until its end.  Node.js delivers exceptioal IO performance that we have evolved into a blazing fast compliant database built around authenication, lists and list items.  Check out our current default listItem datastore.
 ```
 const ObjectHashlist$$M_createEmptyItem = function ( cx ) {
   const $0O_listItem = Object.create ( null ); 
