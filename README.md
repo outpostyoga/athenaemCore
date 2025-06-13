@@ -153,6 +153,18 @@ STRINGS. Javascript string concatenation is optimized for <1K characters <5 elem
 - `"a"` is a character.
 - `"ab"` where `"string".length > 1` is a string.
 
+SYNTAX. As for code documentation, it is built directly into the code itself. This approach is unconventional and difficult to achieve, but it is incredibly effective and I'd like to walk you through how it works.  Typically, code becomes an unreadable, esoteric mix of technical jargon, abbreviations, and personal style—making it difficult to decipher, even for its original author within a year or two. I have struggled with this issue before, as have many teams.  I developed a uniquely structured approach that has worked well in my past roles. Essentially, we trade some coding flexibility to transform the codebase into a readable, essay-like format.  I use variable names and constant structures that can be read like a book or technical document itself instead of a separate description.  There are several structured rules—similar to those used in an essay or book report—that must be consistently followed as the codebase evolves to ensure documentation is seamlessly integrated.  Here are some key principles of this approach.
+
+1. Double-space everything except function closures.
+2. Include a "// Logic. Function description" header above every function and update the version rating with each iteration.
+3. Use clear, readable camelCase naming conventions and structured spacing to maintain an English-like grammatical flow.
+4. Use "// Logic. ...", "// Data. ..." and "// Note. ..." in text comments to clearly explain the logic flow.
+5. Add "// extra details" to clarify variable and statement syntax when necessary, placing them at the end of the line.
+6. Self document every run using a built-in logging system (completed separately, now being integrated)
+7. Use vertical space to spread statements out for readability instead of standard horizontal code practices.
+8. Ensure variable and constant syntax is clear and readable by using namespacing, consistent ALL CAPS prefixes, and structured type-based naming conventions.
+9. Include URL links to external context when useful to "team members from the future".
+
 TIME. Time is always `Date.now ( )` aka UTC timestamps in milliseconds.
 
 VARIABLES. In our syntax, the prefixes are a nod the all caps constant standard. Use let whenever possible and prefix with `a_` means array, `f_` means flag, `f_` means method, `o_` means object, `v_` means value.
