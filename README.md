@@ -175,6 +175,8 @@ STRINGS. Javascript string concatenation is optimized for <1K characters <5 elem
 - `"a"` is a character.
 - `"ab"` where `"string".length > 1` is a string.
 
+Use camel case. Treat every word as a normal word.  This includes words like RADAR and NORAD. Titlecase and merge every word. Lowercase the first letter if the variable isn't a class or a constant. For example, theNoradRadarBeacon and blackpinkNewAlbumLyrics are both great camel case variables.
+
 SYNTAX. As for code documentation, it is built directly into the code itself. This approach is unconventional and difficult to achieve, but it is incredibly effective and I'd like to walk you through how it works.  Typically, code becomes an unreadable, esoteric mix of technical jargon, abbreviations, and personal style—making it difficult to decipher, even for its original author within a year or two. I have struggled with this issue before, as have many teams.  I developed a uniquely structured approach that has worked well in my past roles. Essentially, we trade some coding flexibility to transform the codebase into a readable, essay-like format.  I use variable names and constant structures that can be read like a book or technical document itself instead of a separate description.  There are several structured rules—similar to those used in an essay or book report—that must be consistently followed as the codebase evolves to ensure documentation is seamlessly integrated.  Here are some key principles of this approach.
 
 1. Double-space everything except function closures.
