@@ -4,19 +4,27 @@ const $$F_isBrowserStandaloneConsole = false;
 
 const $$O_settings = {
 
-  // Flag. Where to put the log output.
+  notification : {
 
-  writeLogToConsole : true,
+    // Data. Phone number notification setting for admin role.
 
-  // Flag. Where to put the log output.
+    admin : { phone : 518060587 },
 
-  writeLogToFile : true 
+    // Data. Phone number notification setting for dev role.
+
+    dev : { phone : 3439964795 }
+
+  },
+
+  // Data. Usage range triggers.
+
+  usage : { range : { minimum : 2, maximum : 120 } }
 
 }
 
 module.exports = {
 
-  Boolean$$O_settings : $$O_settings
+  Number$$O_settings : $$O_settings
 
 }
 

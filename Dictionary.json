@@ -1,0 +1,135 @@
+[ { },
+
+  { "en" : "[AcLog.js][$0M_archive()] Compiled log archive successfully written to disk in .zip format using component log files from bin directory." },
+
+  { "en" : "[AcLog.js][$0M_archive()] Compiled log text file successfully written to disk in .txt format using component log files from bin directory." },
+
+  { "en" : "[AcLog.js][$0M_commandLineListener()] Goodbye!" },
+
+  { "en" : "[AcLog.js][$0M_readDirectory()] No files found in the directory after filtering." },
+
+  { "en" : "[AcLog.js][$0M_shutdown()] AcLog.interval.archive is no longer running." },
+
+  { "en" : "[AcLog.js][$0M_shutdown()] Completed successfully." },
+
+  { "en" : "AcLog.interval.archive" },
+
+  { "en" : "require AcLog.js" },
+
+  { "en" : "Module Boot Sequence." },
+
+  { "en" : "$0M_AcSettings.$0M_pathToBaseDirectory" },
+
+  { "en" : "$0M_AcSettings.$0M_pathToLogDirectory" },
+
+  { "en" : "$0M_AcSettings.$0M_pathToLogDirectoryBinDirectory" },
+
+  { "en" : "This is a oneliner string used in AcLog.line()." },
+
+  { "en" : "Testbench 01. Using module function $0M_oneliner()." },
+
+  { "en" : "$0M_testbench01Oneliner" },
+
+  { "en" : "It's been a 24 hour hard days night." },
+
+  { "en" : "[AcLog.js][$0M_shutdown()] AcLog.interval.now is no longer running." },
+
+  { "en" : "AcLog.js" },
+
+  { "en" : "AcLog.interval.now" },
+
+  { "en" : "It's been a minute." },
+
+  { "en" : "AcLog.now.integer" },
+
+  { "en" : "$0M_timestamp()" },
+
+  { "en" : "integer" },
+
+  { "en" : "AcLog.now.hex" },
+
+  { "en" : "hex" },
+
+  { "en" : "I am not programmed to respond to that input command. Sorry!" },
+
+  { "en" : "Setup.js" },
+  
+  { "en" : "Array.prototype.combinations()" },
+
+  { "en" : "New log started because 'cx.log' is missing in funtion call." },
+  
+  { "en" : "An object is required to convert to a hashlist." },
+  
+  { "en" : "CommandLine$$M_listen()" },
+  
+  { "en" : "New log started because 'cx.log' is missing in function call." },
+
+  { "en" : "Goodbye!" },
+  
+  { "en" : "Date.cache interval is no longer running." },
+  
+  { "en" : "$$M_shutdown()" },
+  
+  { "en" : "Compiled log text file successfully written to disk in .txt format using component log files from bin directory." },
+  
+  { "en" : "Compiled log archive successfully written to disk in .zip format using component log files from bin directory." },
+
+  { "en" : "I am not programmed to respond to that input command. Sorry!" },
+  
+  { "en" : "CommandLine$$M_next()" },
+
+  { "en" : "CommandLine$$M_listen()" },
+
+  { "en" : "$0V_command" },
+  
+  { "en" : "require Setup.js" },
+  
+  { "en" : "Module Boot Sequence." },
+
+  { "en" : "DateCache$$M_reset()" },
+
+  { "en" : "DateCache$$M_now()" },
+
+  { "en" : "dateCacheNow" },
+  
+  { "en" : "dateCacheCounter" },
+ 
+  { "en" : "Directory structure created and available for log archives and bin files." },
+
+  { "en" : "Log interval is no longer running." },
+  
+  { "en" : "Log interval is no longer running." },
+  
+  { "en" : "Log$$M_archive()" },
+
+  { "en" : "Completed successfully." },
+
+  { "en" : "Log$$M_start()" },
+
+  { "en" : "Testbench 01. Array$$M_combinations()." },
+
+  { "en" : "Test passed successfully." },
+  
+  { "en" : "Test failed evaluation." },
+  
+  { "en" : "Testbench" },
+
+  { "en" : "Pass" },
+
+  { "en" : "Fail" },
+  
+  { "en" : "Testbench 02. Array$$M_toObject()." },
+
+  { "en" : "Testbench 03. Object$$M_map()." },
+
+  { "en" : "Testbench 04. Object$$M_map()." },
+
+  { "en" : "Testbench 05. Object$$M_map()." },
+  
+  { "en" : "Testbench 06. Object$$M_map()." },
+  
+  { "en" : "Testbench 07. Object$$M_toHashlist()." },
+
+  { "en" : "All memcache containers successfully reset to empty starting values." }
+
+]

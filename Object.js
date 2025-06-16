@@ -1,29 +1,5 @@
 const $$F_isBrowserStandaloneConsole = false;
 
-const {
-  
-  Function$$M_wrap } = $$F_isBrowserStandaloneConsole ? {
-  
-  "Function$$M_wrap" : ( ) => { throw new Error ( "Unavailable." ); }
-
-} : require ( "./Function.js" );
-
-const {
-  
-  StringChat$$M_i18n,
-
-  String$$M_filestart,
-
-  String$$M_oneliner } = $$F_isBrowserStandaloneConsole ? {
-
-  "StringChat$$M_i18n" : ( ) => { throw new Error ( "Unavailable." ) },
-
-  "String$$M_filestart" : ( ) => { throw new Error ( "Unavailable." ) },
-  
-  "String$$M_oneliner" : ( ) => { throw new Error ( "Unavailable." ); }
-
-} : require ( "./String.js" );
-
 // Logic. Shared interval caching for netcode fast cached validation and other purposes. // -- Version Rating. 33/2.
 
 const $$O_memcache = {
@@ -35,6 +11,8 @@ const $$O_memcache = {
     "now" : Date.now ( )
   
   },
+
+  "feamino" : { },
 
   "file" : { },
 
@@ -248,6 +226,22 @@ const $$M_memcacheReset = function ( cx ) {
 
     );
 
+    for ( const $0V_key in $$O_memcache.feamino ) $$O_memcache.feamino[ $0V_key ] = Object.create ( null );
+
+    Log$$M_add ( cx,
+
+      String$$M_oneliner ( cx,
+
+        StringChat$$M_i18n ( cx, "Object.js" ),
+
+        StringChat$$M_i18n ( cx, "$$M_memcacheReset()" ),
+
+        StringChat$$M_i18n ( cx, "Feamino memcache containers successfully reset to an empty Javascript Object." )
+
+      )
+
+    );
+
   }
 
   Log$$M_flush ( cx );
@@ -258,8 +252,32 @@ module.exports = {
 
   Object$$O_memcache : $$O_memcache,
 
-  Object$$M_memcacheNow : $$M_memcacheNow,
-
-  Object$$O_settings : $$O_settings
+  Object$$O_settings : Object.create ( null )
   
 }
+
+// Logic. Weirdly compliant circular require without partial feedback. Put them at the bottom.
+
+const {
+  
+  Function$$M_wrap } = $$F_isBrowserStandaloneConsole ? {
+  
+  "Function$$M_wrap" : ( ) => { throw new Error ( "Unavailable." ); }
+
+} : require ( "./Function.js" );
+
+const {
+  
+  StringChat$$M_i18n,
+
+  String$$M_filestart,
+
+  String$$M_oneliner } = $$F_isBrowserStandaloneConsole ? {
+
+  "StringChat$$M_i18n" : ( ) => { throw new Error ( "Unavailable." ) },
+
+  "String$$M_filestart" : ( ) => { throw new Error ( "Unavailable." ) },
+  
+  "String$$M_oneliner" : ( ) => { throw new Error ( "Unavailable." ); }
+
+} : require ( "./String.js" );
