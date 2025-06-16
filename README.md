@@ -134,6 +134,8 @@ Finally divide them by defined learning environments.
 - inASchool
 - inTheWild
 
+MEMORY. Always have a shutdown function that gracefully exits all known waiting loops, timeouts and intervals so that the application closes itself w/o any forces.  This is to confirm you know all open loops and are managing them in code.  If your shutdown command doesn't gracefully let the application close itself, you are running on steroids and Frankenstein's monsters.
+
 NETCODE. Fastest solution available.  Use it. There is no reason not to.
 - `const $0O_object = Object.create ( null );` // Replaces { } or new Object ( ).
 - `$0O_set[word] = ($0O_set[word] || 0) + 1;` // Uninitialized increment.
