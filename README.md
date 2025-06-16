@@ -193,7 +193,10 @@ TIME. Time is always `Date.now ( )` aka UTC timestamps in milliseconds.
 
 VARIABLES. In our syntax, the prefixes are a nod the all caps constant standard. Use let whenever possible and prefix with `a_` means array, `f_` means flag, `f_` means method, `o_` means object, `v_` means value.
 
-IN DEVELOPMENT.
+# Startup
+ps> node Start.js
+
+# In Development
 1. // Commuter RR - X-Wing - Fighter Class Designation 34F23 'Commander G.'
 2. let jsonInputArgs = cx.debug ? JSON.stringify ( Array.from ( arguments ) ) : undefined;
 3. if ( cx.debug ) cx.log.line ( "[" + $0MM_i18n ( "AcString.js" ) + "][" + $0MM_i18n ( "$0M_assetTag" ) + "] " + jsonInputArgs + " " + $0V_result );
