@@ -19,4 +19,9 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "New comment on GitHub issue"
           to: ${{ secrets.NOTIFICATION_EMAILS }}
-          body: "Someone commented on the issue: ${{ github.event.comment.body }}"
+          body: |
+            #### github.com / outpostyoga / athenaemCore / Issues.
+            #### "${{ github.event.issue.title }}"
+            #### New Comment Posted
+            
+            ${{ github.event.comment.body }}"
