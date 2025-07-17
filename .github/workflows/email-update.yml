@@ -27,3 +27,4 @@ jobs:
             #### New Comment Posted
             
             ${{ github.event.comment.body }}"
+            Link: ${{ github.event.issue.html_url }}
