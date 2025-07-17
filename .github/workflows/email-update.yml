@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send email
-        if: contains(join(github.event.issue.labels.*.name, ','), 'pinned')
+        if: github.event.issue.title == 'End-of-day Comment or Paragraph Summary.'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.zohocloud.ca
