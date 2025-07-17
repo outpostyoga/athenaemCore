@@ -14,10 +14,11 @@ jobs:
         with:
           server_address: smtp.zohocloud.ca
           server_port: 465
+          secure: true
           from: ${{ secrets.EMAIL_USERNAME }}
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "New comment on GitHub issue"
+          subject: "SCRIPS daily commit comment from GitHub and Tyler."
           to: ${{ secrets.NOTIFICATION_EMAILS }}
           body: |
             #### github.com / outpostyoga / athenaemCore / Issues.
