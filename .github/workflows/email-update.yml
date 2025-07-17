@@ -1,0 +1,21 @@
+# .github/workflows/email-update.yml
+name: Email Issue Updates
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.zohocloud.ca
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "New comment on GitHub issue"
+          to: ${{ secrets.NOTIFICATION_EMAILS }}
+          body: "Someone commented on the issue: ${{ github.event.comment.body }}"
